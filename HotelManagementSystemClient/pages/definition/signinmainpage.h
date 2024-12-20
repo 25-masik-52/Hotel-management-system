@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../../helpers/hmsuihelper.h"
+#include "signupmainpage.h"
 #include <QWidget>
 
 namespace Ui {
@@ -17,9 +19,9 @@ public:
 signals:
     void goTo(const QString& className);
     
-//private slots:
-    //void goToSignUpPage();
-    //void watchPassword();
+private slots:
+    void goToSignUpPage();
+    void watchPassword();
 
 private:
     Ui::SignInMainPage* m_ui;
