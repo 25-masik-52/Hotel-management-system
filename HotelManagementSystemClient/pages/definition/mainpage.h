@@ -1,5 +1,4 @@
-#ifndef MAINPAGE_H
-#define MAINPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,5 @@ public:
     ~MainPage();
 
 private:
-    Ui::MainPage *ui;
+    Ui::MainPage* m_ui;
 };
-
-#endif // MAINPAGE_H

@@ -1,14 +1,14 @@
 #include "mainpage.h"
-#include "ui_mainpage.h"
+#include "../forms/ui_mainpage.h"
 
 MainPage::MainPage(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::MainPage)
+    : QWidget{ parent }
+    , m_ui{ new Ui::MainPage }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 MainPage::~MainPage()
 {
-    delete ui;
+    delete m_ui;
 }

@@ -1,5 +1,4 @@
-#ifndef HMSMENUWIDGET_H
-#define HMSMENUWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,6 @@ public:
     ~HmsMenuWidget();
 
 private:
-    Ui::HmsMenuWidget *ui;
+    Ui::HmsMenuWidget* m_ui;
 };
 
-#endif // HMSMENUWIDGET_H

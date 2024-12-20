@@ -1,5 +1,4 @@
-#ifndef BOOKSECTIONPAGE_H
-#define BOOKSECTIONPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,6 @@ public:
     ~BookSectionPage();
 
 private:
-    Ui::BookSectionPage *ui;
+    Ui::BookSectionPage* m_ui;
 };
 
-#endif // BOOKSECTIONPAGE_H

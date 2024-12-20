@@ -1,5 +1,4 @@
-#ifndef SIGNINMAINPAGE_H
-#define SIGNINMAINPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -14,9 +13,15 @@ class SignInMainPage : public QWidget
 public:
     explicit SignInMainPage(QWidget *parent = nullptr);
     ~SignInMainPage();
+    
+signals:
+    void goTo(const QString& className);
+    
+//private slots:
+    //void goToSignUpPage();
+    //void watchPassword();
 
 private:
-    Ui::SignInMainPage *ui;
+    Ui::SignInMainPage* m_ui;
 };
 
-#endif // SIGNINMAINPAGE_H

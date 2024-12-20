@@ -1,10 +1,7 @@
-#ifndef HMSCLIENT_H
-#define HMSCLIENT_H
+#pragma once
 
 class HmsClient
 {
 public:
     HmsClient();
 };
-
-#endif // HMSCLIENT_H

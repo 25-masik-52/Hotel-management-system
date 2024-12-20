@@ -1,14 +1,14 @@
 #include "signupmainpage.h"
-#include "ui_signupmainpage.h"
+#include "../forms/ui_signupmainpage.h"
 
 SignUpMainPage::SignUpMainPage(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::SignUpMainPage)
+    : QWidget{ parent }
+    , m_ui{ new Ui::SignUpMainPage }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 SignUpMainPage::~SignUpMainPage()
 {
-    delete ui;
+    delete m_ui;
 }

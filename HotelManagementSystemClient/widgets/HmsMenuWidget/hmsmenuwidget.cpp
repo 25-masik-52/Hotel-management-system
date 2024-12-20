@@ -2,13 +2,13 @@
 #include "ui_hmsmenuwidget.h"
 
 HmsMenuWidget::HmsMenuWidget(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::HmsMenuWidget)
+    : QWidget{ parent }
+    , m_ui{ new Ui::HmsMenuWidget }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 HmsMenuWidget::~HmsMenuWidget()
 {
-    delete ui;
+    delete m_ui;
 }

@@ -1,5 +1,4 @@
-#ifndef HMSPOPUPWIDGET_H
-#define HMSPOPUPWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,5 @@ public:
     ~HmsPopupWidget();
 
 private:
-    Ui::HmsPopupWidget *ui;
+    Ui::HmsPopupWidget* m_ui;
 };
-
-#endif // HMSPOPUPWIDGET_H

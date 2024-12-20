@@ -1,5 +1,4 @@
-#ifndef ORDERSECTIONPAGE_H
-#define ORDERSECTIONPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,5 @@ public:
     ~OrderSectionPage();
 
 private:
-    Ui::OrderSectionPage *ui;
+    Ui::OrderSectionPage* m_ui;
 };
-
-#endif // ORDERSECTIONPAGE_H

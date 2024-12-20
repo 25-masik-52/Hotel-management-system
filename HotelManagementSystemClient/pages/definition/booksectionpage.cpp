@@ -1,14 +1,14 @@
 #include "booksectionpage.h"
-#include "ui_booksectionpage.h"
+#include "../forms/ui_booksectionpage.h"
 
 BookSectionPage::BookSectionPage(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::BookSectionPage)
+    : QWidget{ parent }
+    , m_ui{ new Ui::BookSectionPage }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 BookSectionPage::~BookSectionPage()
 {
-    delete ui;
+    delete m_ui;
 }

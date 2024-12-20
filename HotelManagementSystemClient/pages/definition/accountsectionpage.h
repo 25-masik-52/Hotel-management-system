@@ -1,5 +1,4 @@
-#ifndef ACCOUNTSECTIONPAGE_H
-#define ACCOUNTSECTIONPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,6 @@ public:
     ~AccountSectionPage();
 
 private:
-    Ui::AccountSectionPage *ui;
+    Ui::AccountSectionPage* m_ui;
 };
 
-#endif // ACCOUNTSECTIONPAGE_H
