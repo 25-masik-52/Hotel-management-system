@@ -1,5 +1,7 @@
 #pragma once
 
+#include "pages/definition/signinmainpage.h"
+#include "pages/definition/signupmainpage.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -15,7 +17,13 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    
+private slots:
+    void goToAnotherWidget(const QString& className);
 
 private:
     Ui::MainWindow* m_ui;
+    
+    SignInMainPage* m_signInPage;
+    SignUpMainPage* m_signUpPage;
 };
