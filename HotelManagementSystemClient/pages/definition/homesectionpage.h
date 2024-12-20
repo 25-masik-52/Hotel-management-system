@@ -1,5 +1,4 @@
-#ifndef HOMESECTIONPAGE_H
-#define HOMESECTIONPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,5 @@ public:
     ~HomeSectionPage();
 
 private:
-    Ui::HomeSectionPage *ui;
+    Ui::HomeSectionPage* m_ui;
 };
-
-#endif // HOMESECTIONPAGE_H

@@ -1,10 +1,7 @@
-#ifndef HMSUIHELPER_H
-#define HMSUIHELPER_H
+#pragma once
 
 class HmsUiHelper
 {
 public:
     HmsUiHelper();
 };
-
-#endif // HMSUIHELPER_H

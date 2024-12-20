@@ -1,5 +1,4 @@
-#ifndef SIGNUPMAINPAGE_H
-#define SIGNUPMAINPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,7 +15,5 @@ public:
     ~SignUpMainPage();
 
 private:
-    Ui::SignUpMainPage *ui;
+    Ui::SignUpMainPage* m_ui;
 };
-
-#endif // SIGNUPMAINPAGE_H

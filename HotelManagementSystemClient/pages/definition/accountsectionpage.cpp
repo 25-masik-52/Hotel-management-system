@@ -1,14 +1,14 @@
 #include "accountsectionpage.h"
-#include "ui_accountsectionpage.h"
+#include "../forms/ui_accountsectionpage.h"
 
 AccountSectionPage::AccountSectionPage(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::AccountSectionPage)
+    : QWidget{ parent }
+    , m_ui{ new Ui::AccountSectionPage }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 AccountSectionPage::~AccountSectionPage()
 {
-    delete ui;
+    delete m_ui;
 }

@@ -1,10 +1,7 @@
-#ifndef HMSCONSTANTS_H
-#define HMSCONSTANTS_H
+#pragma once
 
 class HmsConstants
 {
 public:
     HmsConstants();
 };
-
-#endif // HMSCONSTANTS_H

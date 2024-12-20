@@ -1,14 +1,14 @@
 #include "homesectionpage.h"
-#include "ui_homesectionpage.h"
+#include "../forms/ui_homesectionpage.h"
 
 HomeSectionPage::HomeSectionPage(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::HomeSectionPage)
+    : QWidget{ parent }
+    , m_ui{ new Ui::HomeSectionPage }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 HomeSectionPage::~HomeSectionPage()
 {
-    delete ui;
+    delete m_ui;
 }

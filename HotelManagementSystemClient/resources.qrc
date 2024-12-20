@@ -12,5 +12,7 @@
         <file>assets/icons/fill_star_icon.png</file>
         <file>assets/icons/menu_icon.svg</file>
         <file>assets/icons/opened_eye_icon.svg</file>
+        <file>assets/icons/left_arrow_icon.png</file>
+        <file>assets/icons/right_arrow_icon.png</file>
     </qresource>
 </RCC>

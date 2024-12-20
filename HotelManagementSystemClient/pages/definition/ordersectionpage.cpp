@@ -1,14 +1,14 @@
 #include "ordersectionpage.h"
-#include "ui_ordersectionpage.h"
+#include "../forms/ui_ordersectionpage.h"
 
 OrderSectionPage::OrderSectionPage(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::OrderSectionPage)
+    : QWidget{ parent }
+    , m_ui{ new Ui::OrderSectionPage }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 OrderSectionPage::~OrderSectionPage()
 {
-    delete ui;
+    delete m_ui;
 }

@@ -2,13 +2,13 @@
 #include "ui_hmspopupwidget.h"
 
 HmsPopupWidget::HmsPopupWidget(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::HmsPopupWidget)
+    : QWidget{ parent }
+    , m_ui{ new Ui::HmsPopupWidget }
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 HmsPopupWidget::~HmsPopupWidget()
 {
-    delete ui;
+    delete m_ui;
 }
