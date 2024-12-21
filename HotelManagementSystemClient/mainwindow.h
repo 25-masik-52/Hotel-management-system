@@ -1,5 +1,7 @@
 #pragma once
 
+#include "helpers/hmsclient.h"
+#include "widgets/HmsPopupWidget/hmspopupwidget.h"
 #include "pages/definition/signinmainpage.h"
 #include "pages/definition/signupmainpage.h"
 #include <QMainWindow>
@@ -19,10 +21,15 @@ public:
     ~MainWindow();
     
 private slots:
+    void connectToServer();
     void goToAnotherWidget(const QString& className);
 
 private:
     Ui::MainWindow* m_ui;
+    
+    HmsClient* m_client;
+    
+    HmsPopupWidget* m_popup;
     
     SignInMainPage* m_signInPage;
     SignUpMainPage* m_signUpPage;

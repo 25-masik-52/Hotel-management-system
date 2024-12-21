@@ -46,6 +46,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(HotelManagementSystemClient
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+	helpers/hmsobjects.h helpers/hmsobjects.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET HotelManagementSystemClient APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

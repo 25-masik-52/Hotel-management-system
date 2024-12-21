@@ -11,6 +11,7 @@
 #include <QTableView>
 #include <QStandardItem>
 #include <QHeaderView>
+#include <QGraphicsOpacityEffect>
 
 namespace Ui {
 class HmsPopupWidget;
@@ -47,6 +48,7 @@ public:
     
 public:
     void exec();
+    void close();
     
     HmsPopupWidget* setTitle(const QString& title);
     HmsPopupWidget* setButtons(const HmsPopupButtonsFlags& buttons);
@@ -55,6 +57,7 @@ public:
     HmsPopupWidget* setFooterTitle(const QString& title);
     HmsPopupWidget* addInfoRows(const QList<QStringList>& values, bool centering = false);
     HmsPopupWidget* addLineEdit(QLineEdit* lineEdit);
+    QLineEdit* getLineEdit(const QString& objectName);
     HmsPopupWidget* addRateSystem();
     
 protected:

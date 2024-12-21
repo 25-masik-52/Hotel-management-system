@@ -26,12 +26,24 @@ HmsPopupWidget::HmsPopupWidget(QWidget *parent)
     setAttribute(Qt::WA_TranslucentBackground);
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    setWindowModality(Qt::ApplicationModal);
 }
 
 void HmsPopupWidget::exec()
 {
-    for (auto* parentWidget : static_cast<QWidget*>(parent())->findChildren<QWidget*>())
+    if (!parent())
+        return;
+    
+    for (auto* parentWidget : this->parent()->findChildren<QWidget*>())
+    {
+        if (parentWidget == this || this->findChildren<QWidget*>().contains(parentWidget))
+            continue;
+        
         parentWidget->setEnabled(false);
+        auto* effect = new QGraphicsOpacityEffect{};
+        effect->setOpacity(0.2);
+        parentWidget->setGraphicsEffect(effect);
+    }
     
     adjustSize();
     updateGeometry();
@@ -39,6 +51,20 @@ void HmsPopupWidget::exec()
     setGeometry(15, 15, width(), height());
     
     this->show();
+}
+
+void HmsPopupWidget::close()
+{
+    if (!parent())
+        return;
+    
+    for (auto* parentWidget : this->parent()->findChildren<QWidget*>())
+    {
+        parentWidget->setEnabled(true);
+        auto* effect = new QGraphicsOpacityEffect{};
+        effect->setOpacity(1);
+        parentWidget->setGraphicsEffect(effect);
+    }
 }
 
 HmsPopupWidget* HmsPopupWidget::setTitle(const QString& title)
@@ -51,7 +77,7 @@ HmsPopupWidget* HmsPopupWidget::setTitle(const QString& title)
         titleLabel->setFont(HmsUiHelper::Regular_Bold_Font);
         titleLabel->setStyleSheet(QString{ "background: transparent;" });
         
-        m_topLayout->addWidget(titleLabel, 0, m_topLayout->children().count() == 0 ? Qt::AlignmentFlag::AlignHCenter : Qt::AlignmentFlag::AlignRight);
+        m_topLayout->addWidget(titleLabel, 0, m_topLayout->children().isEmpty() ? Qt::AlignmentFlag::AlignHCenter : Qt::AlignmentFlag::AlignRight);
     }
     else
     {
@@ -190,6 +216,11 @@ HmsPopupWidget* HmsPopupWidget::addLineEdit(QLineEdit* lineEdit)
 {
     m_bodyLayout->addWidget(lineEdit);
     return this;
+}
+
+QLineEdit* HmsPopupWidget::getLineEdit(const QString& objectName)
+{
+    return findChild<QLineEdit*>(objectName);
 }
 
 HmsPopupWidget* HmsPopupWidget::addRateSystem()
