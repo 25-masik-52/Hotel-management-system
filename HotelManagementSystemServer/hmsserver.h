@@ -1,15 +1,23 @@
-#ifndef HMSSERVER_H
-#define HMSSERVER_H
+#pragma once
 
+#include "hmsdatabase.h"
 #include <QObject>
+#include <QTcpServer>
+#include <QTcpSocket>
 
 class HmsServer : public QObject
 {
     Q_OBJECT
 public:
-    explicit HmsServer(QObject *parent = nullptr);
-
-signals:
+    explicit HmsServer(uint port, const HmsDatabase& database, QObject *parent = nullptr);
+    
+private slots:
+    void onNewConnection();
+    void clientSentRequest();
+    
+private:
+    uint m_port;
+    QTcpServer* m_server;
+    QList<QTcpSocket*> m_clients;
+    HmsDatabase m_database;
 };
-
-#endif // HMSSERVER_H

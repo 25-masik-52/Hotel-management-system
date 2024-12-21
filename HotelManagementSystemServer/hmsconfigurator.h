@@ -1,15 +1,19 @@
-#ifndef HMSCONFIGURATOR_H
-#define HMSCONFIGURATOR_H
+#pragma once
 
-#include <QObject>
+#include "hmsconstants.h"
+#include <QString>
+#include <QSettings>
 
-class HmsConfigurator : public QObject
+class HmsConfigurator
 {
-    Q_OBJECT
 public:
-    explicit HmsConfigurator(QObject *parent = nullptr);
-
-signals:
+    /// Server
+    static uint getServerPort();
+    
+    /// Database
+    static QString getDatabaseName();
+    static QStringList getDatabaseSQLQueries();
+    
+private:
+    static const QSettings m_settings;
 };
-
-#endif // HMSCONFIGURATOR_H
