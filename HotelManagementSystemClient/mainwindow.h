@@ -1,5 +1,7 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
+
+#include "pages/definition/signinmainpage.h"
+#include "pages/definition/signupmainpage.h"
 
 #include <QMainWindow>
 
@@ -15,9 +17,11 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    ~MainWindow() = default;
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow* m_ui;
+    
+    SignInMainPage* m_signInPage;
+    SignUpMainPage* m_signUpPage;
 };
-#endif // MAINWINDOW_H
