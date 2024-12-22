@@ -14,7 +14,7 @@ class SignInMainPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit SignInMainPage(QWidget *parent = nullptr);
+    explicit SignInMainPage(QWidget* parent = nullptr);
     ~SignInMainPage() = default;
     
 signals:

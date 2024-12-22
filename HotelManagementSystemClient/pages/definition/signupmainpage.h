@@ -14,7 +14,7 @@ class SignUpMainPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit SignUpMainPage(QWidget *parent = nullptr);
+    explicit SignUpMainPage(QWidget* parent = nullptr);
     ~SignUpMainPage() = default;
     
 signals:

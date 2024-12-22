@@ -1,7 +1,7 @@
 #include "signinmainpage.h"
 #include "../forms/ui_signinmainpage.h"
 
-SignInMainPage::SignInMainPage(QWidget *parent)
+SignInMainPage::SignInMainPage(QWidget* parent)
     : QWidget{ parent }
     , m_ui{ new Ui::SignInMainPage }
     , m_controlHelper{ new HmsControlHelper }

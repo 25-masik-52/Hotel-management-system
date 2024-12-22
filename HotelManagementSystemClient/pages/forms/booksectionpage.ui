@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BookSectionPage</class>
+ <widget class="QWidget" name="BookSectionPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>370</width>
+    <height>295</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#BookSectionPage {
+	background-color: #FFFFFF;
+}
+
+QFrame {
+	border: 1px none;
+	border-radius: 3;
+	background-color: #FDF0D5;
+}
+
+QPushButton {
+	color: #FFFFFF;
+	background-color: #003049;
+	border: 1px none;
+	border-radius: 3;
+	font-family: 'TT Wellingtons';
+	font-size: 14pt;
+}
+
+QLabel {
+	color: #003049;
+	font-family: 'TT Wellingtons';
+	font-size: 14pt;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>15</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="infoFrame">
+     <property name="styleSheet">
+      <string notr="true">border: 1px none;
+border-radius: 3;
+background-color: #FDF0D5;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="infoGridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>190</width>
+          <height>130</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Firstly, please,
+choose the date
+after that choose
+desired room.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="2">
+    <widget class="QFrame" name="previewFrame">
+     <property name="minimumSize">
+      <size>
+       <width>165</width>
+       <height>295</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="previewGridLayout">
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>0</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="4" column="0">
+       <widget class="QLabel" name="ratesLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Rates:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="floorLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Floor:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="ratingLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Rating:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="roomLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Room:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="roomValueLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>N_NN</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="floorValueLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>N</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="ratingValueLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>N/5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="ratesValueLabel">
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>N</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QFrame" name="frame_4">
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="controlFrame">
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="controlGridLayout">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="chooseDateButton">
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose date</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="chooseRoomButton">
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choose room</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="bookButton">
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>TT Wellingtons</family>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="text">
+         <string>Book</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

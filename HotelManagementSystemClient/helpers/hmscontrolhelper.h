@@ -14,6 +14,9 @@ class HmsControlHelper : public QWidget
     Q_OBJECT
     
 public:
+    HmsControlHelper() = default;
+    
+public:
     void setWatchPasswordAction(QLineEdit* lineEdit);
     QString encryptSha256(const QString& text) const;
     bool isFieldValid(QLineEdit* sourceLineEdit, const QString& errorText = {}, QLabel* errorLineEdit = nullptr);
