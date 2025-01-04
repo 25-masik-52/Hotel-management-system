@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/fonts">
+        <file>assets/fonts/CinzelDecorative-Bold.ttf</file>
+        <file>assets/fonts/TT Wellingtons Bold.otf</file>
+        <file>assets/fonts/TT Wellingtons Medium.otf</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>assets/icons/closed_eye_icon.svg</file>
+        <file>assets/icons/empty_star_icon.png</file>
+        <file>assets/icons/fill_star_icon.png</file>
+        <file>assets/icons/left_arrow_icon.png</file>
+        <file>assets/icons/menu_icon.svg</file>
+        <file>assets/icons/opened_eye_icon.svg</file>
+        <file>assets/icons/right_arrow_icon.png</file>
+    </qresource>
+</RCC>

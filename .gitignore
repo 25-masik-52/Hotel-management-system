@@ -52,3 +52,10 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# Hms
+.ssh/
+HotelManagementSystemClient/build/
+HotelManagementSystemClient/CMakeLists.txt.user
+HotelManagementSystemServer/build/
+HotelManagementSystemServer/CMakeLists.txt.user
