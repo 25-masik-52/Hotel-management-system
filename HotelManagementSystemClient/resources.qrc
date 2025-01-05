@@ -13,4 +13,8 @@
         <file>assets/icons/opened_eye_icon.svg</file>
         <file>assets/icons/right_arrow_icon.png</file>
     </qresource>
+    <qresource prefix="/qss">
+        <file>assets/qss/main.qss</file>
+        <file>assets/qss/signIn.qss</file>
+    </qresource>
 </RCC>
