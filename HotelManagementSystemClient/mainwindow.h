@@ -1,7 +1,9 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
+
+#include "pages/definition/signinmainpage.h"
 
 #include <QMainWindow>
+#include <QFile>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -14,10 +16,13 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    MainWindow(QWidget* parent = nullptr);
+    ~MainWindow() = default;
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow* m_ui;
+    SignInMainPage* m_signInPage;
+    
+private:
+    void initStyleSheets();
 };
-#endif // MAINWINDOW_H

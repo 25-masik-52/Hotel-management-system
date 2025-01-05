@@ -1,0 +1,46 @@
+#SignInMainPage
+{
+	background: transparent;
+}
+
+#titleLabel
+{
+	color: #003049;
+	font: bold 36px 'Cinzel Decorative';
+}
+
+QLineEdit
+{
+	color: #003049;
+	background-color: qlineargradient(x1:0.5, y1:1, x2:0.5, y2:0, stop: 0 #FDF0D5, stop: 0.9 #E7DBC3, stop: 1 #D4C9B3);
+	border: 1px none;
+	border-radius: 3;
+	font: normal 20px 'TT Wellingtons';
+}
+
+#errorLabel
+{
+	color: #C1121F;
+	font: bold 12px 'TT Wellingtons';
+}
+
+#signInButton
+{
+	color: #FFFFFF;
+	background-color: #003049;
+	border: 1px none;
+	border-radius: 3;
+	font: normal 20px 'TT Wellingtons';
+}
+
+#signUpButton
+{
+	color: #003049;
+	border: none;
+	font: normal 20px 'TT Wellingtons';
+}
+
+#signUpButton:hover
+{
+	text-decoration: underline;
+}
