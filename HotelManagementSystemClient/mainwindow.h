@@ -2,6 +2,7 @@
 
 #include "pages/definition/signinmainpage.h"
 #include "pages/definition/signupmainpage.h"
+#include "pages/definition/mainpage.h"
 
 #include <QMainWindow>
 #include <QFile>
@@ -22,12 +23,16 @@ public:
     
 private slots:
     void goToEmitted(const QString& className);
+    void signInEmitted(const QString& login, const QString& password);
 
 private:
     Ui::MainWindow* m_ui;
     SignInMainPage* m_signInPage;
     SignUpMainPage* m_signUpPage;
+    MainPage* m_mainPage;
     
 private:
     void initStyleSheets();
+    void initStackedWidget();
+    void connectPages();
 };

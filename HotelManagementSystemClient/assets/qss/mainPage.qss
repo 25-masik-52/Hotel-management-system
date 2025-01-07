@@ -1,0 +1,11 @@
+#MainPage
+{
+	background: transparent;
+}
+
+#titleLabel
+{
+	color: #003049;
+	font: bold 24px 'Cinzel Decorative';
+}
+

@@ -38,8 +38,7 @@ void SignInMainPage::signInClicked()
     if (!areFieldsValid())
         return;
     
-    // sign in
-    qDebug() << "sing in";
+    emit signIn(m_ui->loginLineEdit->text(), m_ui->passwordLineEdit->text());
 }
 
 void SignInMainPage::goToClicked()

@@ -59,6 +59,7 @@ const QMap<QString, QString> HmsUiHelper::m_qssFiles
 {
     { MainWindow::staticMetaObject.className(), ":/qss/assets/qss/main.qss" },
     { SignInMainPage::staticMetaObject.className(), ":/qss/assets/qss/signIn.qss" },
-    { SignUpMainPage::staticMetaObject.className(), ":/qss/assets/qss/signUp.qss" }
+    { SignUpMainPage::staticMetaObject.className(), ":/qss/assets/qss/signUp.qss" },
+    { MainPage::staticMetaObject.className(), ":/qss/assets/qss/mainPage.qss" }
 };
 

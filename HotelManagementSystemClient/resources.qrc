@@ -17,5 +17,6 @@
         <file>assets/qss/main.qss</file>
         <file>assets/qss/signIn.qss</file>
         <file>assets/qss/signUp.qss</file>
+        <file>assets/qss/mainPage.qss</file>
     </qresource>
 </RCC>
