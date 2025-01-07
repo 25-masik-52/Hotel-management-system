@@ -35,7 +35,9 @@ public:
 public:
     void setWatchPasswordAction(QLineEdit* lineEdit);
     bool isFieldEmpty(QLineEdit* field);
+    bool isFieldsEqual(QLineEdit* firstField, QLineEdit* secondField);
     
 private slots:
     void watchPassword();
+    void colorizeField(QLineEdit* field, const QColor& color);
 };
