@@ -38,22 +38,18 @@ void HmsControlHelper::setWatchPasswordAction(QLineEdit* lineEdit)
 bool HmsControlHelper::isFieldEmpty(QLineEdit* field)
 {
     auto isEmpty = field->text().isEmpty();
-    auto color = isEmpty ? HmsUiHelper::HMS_COLOR_RED : HmsUiHelper::HMS_COLOR_DARK_BLUE;
-    
-    field->setStyleSheet(HmsUiHelper::changeStyleSheetProperty(field->styleSheet(), "color", color.name()));
-    
-    const auto actions = field->actions();
-    
-    const auto watchPasswordActionIter = std::find_if(actions.begin(), actions.end(),
-                                                      [] (QAction* action)
-                                                      {
-                                                          return dynamic_cast<HmsWatchPasswordAction*>(action) != nullptr;
-                                                      });
-    
-    if (watchPasswordActionIter != actions.end())
-        dynamic_cast<HmsWatchPasswordAction*>(*watchPasswordActionIter)->setIconColor(color);
+    colorizeField(field, isEmpty ? HmsUiHelper::HMS_COLOR_RED : HmsUiHelper::HMS_COLOR_DARK_BLUE);
     
     return isEmpty;
+}
+
+bool HmsControlHelper::isFieldsEqual(QLineEdit* firstField, QLineEdit* secondField)
+{
+    auto isEqual = firstField->text() == secondField->text();
+    colorizeField(firstField, isEqual ? HmsUiHelper::HMS_COLOR_DARK_BLUE : HmsUiHelper::HMS_COLOR_RED);
+    colorizeField(secondField, isEqual ? HmsUiHelper::HMS_COLOR_DARK_BLUE : HmsUiHelper::HMS_COLOR_RED);
+    
+    return isEqual;
 }
 
 void HmsControlHelper::watchPassword()
@@ -78,4 +74,19 @@ void HmsControlHelper::watchPassword()
     senderAction->setIconPath(echoMode == QLineEdit::Normal
                                   ? HmsUiHelper::HMS_ICON_OPENED_EYE
                                   : HmsUiHelper::HMS_ICON_CLOSED_EYE);
+}
+
+void HmsControlHelper::colorizeField(QLineEdit* field, const QColor& color)
+{
+    field->setStyleSheet(HmsUiHelper::changeStyleSheetProperty(field->styleSheet(), "color", color.name()));
+    
+    const auto actions = field->actions();
+    const auto watchPasswordActionIter = std::find_if(actions.begin(), actions.end(),
+                                                      [] (QAction* action)
+                                                      {
+                                                          return dynamic_cast<HmsWatchPasswordAction*>(action) != nullptr;
+                                                      });
+    
+    if (watchPasswordActionIter != actions.end())
+        dynamic_cast<HmsWatchPasswordAction*>(*watchPasswordActionIter)->setIconColor(color);
 }

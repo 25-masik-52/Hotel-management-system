@@ -1,6 +1,7 @@
 #pragma once
 
 #include "pages/definition/signinmainpage.h"
+#include "pages/definition/signupmainpage.h"
 
 #include <QMainWindow>
 #include <QFile>
@@ -18,10 +19,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow() = default;
+    
+private slots:
+    void goToEmitted(const QString& className);
 
 private:
     Ui::MainWindow* m_ui;
     SignInMainPage* m_signInPage;
+    SignUpMainPage* m_signUpPage;
     
 private:
     void initStyleSheets();

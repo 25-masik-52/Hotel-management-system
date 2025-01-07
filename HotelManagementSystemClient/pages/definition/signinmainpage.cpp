@@ -1,6 +1,8 @@
 #include "signinmainpage.h"
 #include "../forms/ui_signinmainpage.h"
 
+#include "signupmainpage.h"
+
 SignInMainPage::SignInMainPage(QWidget* parent)
     : QWidget{ parent }
     , m_ui{ new Ui::SignInMainPage }
@@ -42,8 +44,7 @@ void SignInMainPage::signInClicked()
 
 void SignInMainPage::goToClicked()
 {
-    // go to sign up
-    qDebug() << "go to sign up";
+    emit goTo(SignUpMainPage::staticMetaObject.className());
 }
 
 void SignInMainPage::initActions()

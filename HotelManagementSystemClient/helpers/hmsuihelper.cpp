@@ -58,6 +58,7 @@ QIcon HmsUiHelper::createIconFromSvg(const QString& svgFilePath, const QColor& c
 const QMap<QString, QString> HmsUiHelper::m_qssFiles
 {
     { MainWindow::staticMetaObject.className(), ":/qss/assets/qss/main.qss" },
-    { SignInMainPage::staticMetaObject.className(), ":/qss/assets/qss/signIn.qss" }
+    { SignInMainPage::staticMetaObject.className(), ":/qss/assets/qss/signIn.qss" },
+    { SignUpMainPage::staticMetaObject.className(), ":/qss/assets/qss/signUp.qss" }
 };
 
