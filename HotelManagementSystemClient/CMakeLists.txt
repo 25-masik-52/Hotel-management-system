@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS
     Widgets
+    MultimediaWidgets
     Svg
     Xml
     Network)
@@ -55,6 +56,7 @@ set(HMS_MENU_WIDGET_PLUGIN "${PLUGIN_DIR}/libHmsMenuWidgetPlugin.so")
 
 target_link_libraries(HotelManagementSystemClient PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::MultimediaWidgets
     Qt${QT_VERSION_MAJOR}::Svg
     Qt${QT_VERSION_MAJOR}::Xml
     Qt${QT_VERSION_MAJOR}::Network
