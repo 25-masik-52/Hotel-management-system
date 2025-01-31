@@ -1,5 +1,6 @@
 #pragma once
 
+#include "hmsmenuwidget.h"
 #include <QWidget>
 
 namespace Ui {
@@ -16,4 +17,5 @@ public:
 
 private:
     Ui::MainPage* m_ui;
+    HmsMenuWidget* m_menuWidget;
 };

@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/hms_menu_fonts">
+        <file>assets/fonts/TT Wellingtons Medium.otf</file>
+        <file>assets/fonts/TT Wellingtons Bold.otf</file>
+        <file>assets/fonts/CinzelDecorative-Bold.ttf</file>
+    </qresource>
+    <qresource prefix="/hms_menu_icons">
+        <file>assets/icons/menu_icon.svg</file>
+    </qresource>
+    <qresource prefix="/hms_menu_qss">
+        <file>assets/qss/menu_main.qss</file>
+    </qresource>
+</RCC>
