@@ -1,0 +1,63 @@
+#HmsMenuWidget
+{
+	background-color: transparent;
+}
+
+#menuFrame
+{
+	border: 1px none;
+	border-radius: 5;
+	background-color: #780000;
+}
+
+#menuLabel
+{
+	color: #FDF0D5;
+	background-color: transparent;
+	font: bold 24px 'Cinzel Decorative';
+}
+
+#menuComboBox
+{
+	color: #FDF0D5;
+	border: 1px none;
+	border-radius: 5;
+	background-color: #780000;
+	font: 700 20px 'TT Wellingtons';
+}
+
+#menuComboBox::drop-down
+{
+	width: 0px;
+	height: 0px;
+	border: none;
+}
+
+#menuComboBox QComboBoxPrivateContainer
+{
+	border: 1px none;
+	border-radius: 5px;
+}
+
+#menuComboBox QListView
+{
+	color: #FDF0D5;
+	border: 1px none;
+	border-radius: 5;
+	background-color: #780000;
+	font: 500 20px 'TT Wellingtons';
+}
+
+#menuComboBox QListView::item:selected
+{
+	color: #FDF0D5;
+	border: 1px none;
+	border-radius: 5;
+	background-color: #780000;
+}
+
+#menuButton
+{
+	background-color: #FDF0D5;
+	qproperty-icon: url(:/hms_menu_icons/assets/icons/menu_icon.svg);
+}

@@ -10,7 +10,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Svg Xml Network)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS
+    Widgets
+    Svg
+    Xml
+    Network)
 
 file(GLOB HELPERS_H helpers/*.h)
 file(GLOB HELPERS_CPP helpers/*.cpp)
@@ -18,10 +22,6 @@ file(GLOB HELPERS_CPP helpers/*.cpp)
 file(GLOB PAGES_H pages/definition/*.h)
 file(GLOB PAGES_CPP pages/definition/*.cpp)
 file(GLOB PAGES_UI pages/forms/*.ui)
-
-file(GLOB WIDGETS_H widgets/*/*.h)
-file(GLOB WIDGETS_CPP widgets/*/*.cpp)
-file(GLOB WIDGETS_UI widgets/*/*.ui)
 
 set(PROJECT_SOURCES
     main.cpp
@@ -36,10 +36,6 @@ set(PROJECT_SOURCES
     ${PAGES_H}
     ${PAGES_CPP}
     ${PAGES_UI}
-    
-    ${WIDGETS_H}
-    ${WIDGETS_CPP}
-    ${WIDGETS_UI}
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -53,11 +49,16 @@ else()
     )
 endif()
 
+set(PLUGIN_DIR "${CMAKE_SOURCE_DIR}/plugins")
+include_directories(${PLUGIN_DIR})
+set(HMS_MENU_WIDGET_PLUGIN "${PLUGIN_DIR}/libHmsMenuWidgetPlugin.so")
+
 target_link_libraries(HotelManagementSystemClient PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Svg
     Qt${QT_VERSION_MAJOR}::Xml
     Qt${QT_VERSION_MAJOR}::Network
+    ${HMS_MENU_WIDGET_PLUGIN}
 )
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)
